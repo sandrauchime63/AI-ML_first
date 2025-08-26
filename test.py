@@ -19,7 +19,7 @@ class_number=["S", "O", "U", "I", "A", "2", "1", "3", "i", "4"]
 #plt.show()
 
 x_train=x_train/255.0
-x_test=y_train/255.0
+x_test=x_test/255.0
 
 model=keras.Sequential([
     keras.layers.Flatten(input_shape=(28, 28)),
