@@ -1,3 +1,4 @@
+
 import tensorflow as tf
 from tensorflow import keras 
 import matplotlib.pyplot as plt
@@ -12,12 +13,17 @@ print(x_train[0, 10, 15])
 
 class_number=["S", "O", "U", "I", "A", "2", "1", "3", "i", "4"]
 
-#plt.figure()
-#plt.imshow(x_train[12])
-#plt.colorbar()
-#plt.title("Whatever")
-#plt.show()
+#To show the first 10 images in the dataset
+'''
+for i in range(10):
+    plt.subplot(2, 5, i+1)
+    plt.imshow(x_train[i], cmap=plt.cm.binary)
+    plt.title(class_number[y_train[i]])
+    plt.axis("off")
+    plt.show()
 
+'''
+#make training easier by dividing by 255 and turning pixel to 0 and 1
 x_train=x_train/255.0
 x_test=x_test/255.0
 
